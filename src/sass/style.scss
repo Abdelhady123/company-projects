@@ -1,0 +1,336 @@
+$main-color:#ff7766;
+$custom-color:#EEE;
+@font-face{
+    font-family: "cairofont";
+    src:url(../fonts/Cairo-Regular.ttf);
+}
+body{
+    font-family: "cairofont",'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
+
+}
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    overflow-x: hidden;
+}
+//القائمة العلوية
+.top-menu{
+    .navbar{
+        font-weight: bold;
+        padding: 0px 100px !important;
+        background-color: #fff !important;
+        .navbar-nav{
+            li > a{
+                transition-property: background-color;
+                transition-duration: 0.5s;
+                &:hover{
+                    color: $main-color !important;
+                    background-color: $custom-color;
+                    border-bottom: 1px solid $main-color;
+                }
+            }
+        }
+    }
+}
+//carousel (الدوار)
+.carousel-top{
+    .row{
+        display: block !important;
+    }
+    .carousel{
+        .carousel-item{
+            img{
+                height:450px;
+            }
+            .overlay{
+                position: absolute;
+                background-color: rgba(65,155,155,0.5);
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                display: flex !important;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 1;
+
+                h1{
+                   font-weight: bold;
+                   color: white;
+                   margin-bottom: 50px;
+                }
+                h4{
+                   width: 60%;
+                   color: $custom-color;
+                }
+            }
+           
+        }
+        .carousel-indicators{
+            li{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 20px 5px 0px 0px;
+                &.active
+                {
+                    background-color: $main-color;
+                }
+            }
+
+        }
+      
+    }
+}
+//الزر الموجود داخل ال carousel
+.custom-btn{
+    padding: 10px 20px;
+    color:$main-color !important;
+    border: 1px solid $main-color !important;
+    font-weight: bold;
+    &:hover,
+    &:focus{
+        color:$custom-color !important;
+        background-color: $main-color !important;
+        border: 1px solid $custom-color !important;
+    }
+}
+//من نحن(who are we)
+.who-are-we{
+    .custom-paragraph{
+         line-height: 2em;
+         font-weight: bold;
+         span{
+            color: $main-color;
+         }
+    }
+   
+}
+.custom-btn-main{
+    padding: 20px;
+    background-color: $main-color !important;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    &:hover{
+        color: #000;
+    }
+}
+//latest-projects
+.latest-projects{
+    background-color: #FFFFCC;
+    #latest-company-projects{
+        width: 80%;
+        .thumbnail2{
+            position: relative;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            .caption2{
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(65,155,155,0.5);
+                width: 100%;
+                height: 100%;
+                padding:-2%;
+                text-align: center;
+                color: #fff !important;
+                display: none;
+                padding-top: 10px;
+            }
+            .project-category{
+                position: absolute;
+                right: 0px;
+                top:5%;
+                font-weight: bold;
+                background-color: rgba(240,240,240,0.75);
+                padding: 10px;
+                border-top-left-radius:10px;
+                border-bottom-left-radius:10px;
+                box-shadow: 0px 5px 20px 0px #0a0a0a;
+            }
+        }
+        a.carousel-control-next{
+           position: absolute;
+           left: -5%;
+           color: #fc5c5c;
+           width: 0;
+        }
+        a.carousel-control-prev{
+            position: absolute;
+            right: -6%;
+            color: #fc5c5c;
+            width: 0;
+         }
+    }
+    .project-details{
+        display: -webkit-box;
+        -webkit-line-clamp:1;
+        -webkit-box-orient:vertical;
+        overflow: hidden;
+    }
+}
+// قالو عن الشركة 
+.said-about-company{
+    .custom-img{
+        border-radius:10px;
+        margin: 20px;
+    }
+    .custom-paragraph{
+        line-height: 2em;
+    }
+   
+    a.carousel-control-next{
+        color: #fc5c5c !important;
+        position: absolute;
+        left: 7%;
+        width: 0;
+    }
+    a.carousel-control-prev{
+        color: #fc5c5c !important;
+        position: absolute;
+        right: 7%;
+        width: 0;
+    }
+}
+// العملاء
+.clients{
+    background-color:#419B9B ;
+}
+//المدونات الاخيرة
+.latesst-post{
+    .card-body{
+        width: 90%;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        position: relative;
+        background-color: white;
+        top:-17px;
+        left:-5%;
+    }
+    .card-title{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .card-text{
+        font-size: 14px;
+    }
+    .delete-more-text{
+        display: -webkit-box;
+        -webkit-line-clamp:2;
+        -webkit-box-orient:vertical;
+        overflow: hidden;
+    }
+}
+//footer
+footer{
+    height: 450px;
+    background-color: #393939;
+    h2{
+        color: $custom-color;
+        font-size: 150%;
+    }
+    .line1{
+        width: 5%;
+        border-top: 3px solid $custom-color;
+    }
+    #footer-nav-links{
+        a{
+            text-decoration: none;
+            color: #BBBBBB;
+            margin-left: 15px;
+            font-size: 110%;
+            &:hover,
+            &:focus{
+                color:$custom-color;
+            }
+        }
+    }
+    .line2{
+        width: 60%;
+        border-top: 3px solid $custom-color;
+    }
+    label{
+        font-size: 130%;
+
+    }
+    .form{
+        margin-right: 48px;
+        margin-left: 48px;
+
+        input{
+            background-color: #202020;
+            border-radius: 1px;
+            border: 0px;
+          &:focus{
+            background-color: #202020;
+            box-shadow: 0 0 2px 0 $custom-color;
+            border-color: $custom-color;
+            color: $custom-color;
+          }
+        }
+        .btn{
+            background-color: $custom-color;
+            &:hover,
+            &:focus{
+                color: $custom-color !important;
+                background-color: #363636 !important;
+                border: 1px solid $custom-color;
+                transition-property: color,background-color,border;
+                transition-duration: 0.3s;
+            }
+        }
+    }
+    .copyright{
+        color:#969696;
+        font-size: 110%;
+        font-weight: bold;
+    }
+    .copyright-link{
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover,
+        &:focus{
+            color:$custom-color;
+        }
+
+    }
+}
+@media (max-width:991px) {
+    //القائمة العلوية
+    .top-menu{
+        .navbar{
+            padding: 0px 20px !important;
+        }
+        .navbar-nav{
+            a {
+                border-bottom: none !important;
+                padding-right: 8px;
+            }
+        }
+    }
+}
+@media(max-width:767px){
+    //carousel
+    .carousel-top{
+        .carousel{
+            .carousel-caption{
+                h1{
+                   font-size: 30px;
+                }
+                h4{
+                   font-size: 20px;
+                }
+            }
+        }
+    }
+   
+}
+@media (min-width: 992px) and (max-width: 1162px) {
+    .custom-btn{
+        padding:5px 10px;
+        margin-top:-15px;
+    }
+}
