@@ -1,0 +1,91 @@
+@use './_variables.scss' as *;
+
+.baner{
+    .banner-img{
+        background-image: url(../images/projects-banner.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 10%;
+        height: 250px;
+    }
+    .overlay{
+        position: absolute;
+        background-color: rgba(65,155,155,0.5);
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        font-weight: bold;
+        color: white;
+    }
+}
+//اعمال الشركة
+.our-works{
+    .card{
+        .custom-btn-2{
+            color: #363636;
+            background-color: white;
+            border: none;
+            border-radius: 1px;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            &:hover,
+            &:focus{
+                color: white;
+                background-color: $main-color;
+                border: none;
+            }
+        }
+        .text-more{
+            display: -webkit-box;
+            -webkit-line-clamp:2;
+            -webkit-box-orient:vertical;
+            overflow: hidden;
+        }
+    }
+}
+//تنسيقات ال معرض
+.btn,
+button {
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+#image-gallery {
+  .modal-footer {
+    display: block;
+  }
+}
+
+.thumb {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+//تفاصيل المشروع
+.project-details{
+  .card{
+    .card-body{
+      .card-title{
+        font-weight: 800;
+        color: $main-color;
+      }
+    }
+  }
+}
+@media(max-width:576px){
+  .project-details{
+    .thumb{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}

@@ -1,5 +1,9 @@
-$main-color:#ff7766;
-$custom-color:#EEE;
+@use './projects.scss';
+@use './_variables.scss' as *;
+@use'./blog.scss';
+@use './about.scss';
+@use './contact.scss';
+
 @font-face{
     font-family: "cairofont";
     src:url(../fonts/Cairo-Regular.ttf);
