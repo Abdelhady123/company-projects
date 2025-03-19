@@ -90,6 +90,16 @@ $(".custom-file-input").on("change", function() {
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
 
+var pathname=window.location.pathname;
+$('.navbar-nav > li >a[href="'+pathname+'"]').parent().addClass('active');
+
+if (pathname == "/blog-details.html" || pathname=="/add-blog.html"){
+  $('.navbar-nav >li > a[href="/blog.html"]').parent().addClass('active');
+}
+
+if(pathname == "/projects-details.html"){
+  $('.navbar-nav >li > a[href="/projects.html"]').parent().addClass('active');
+}
 var data = new Date();
 var year = data.getFullYear();
 document.getElementById("date").innerHTML = year;
