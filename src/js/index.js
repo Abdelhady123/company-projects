@@ -89,7 +89,7 @@ $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
   $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 });
-
+//اضهر اكلاس active للصصفحة الحالية
 var pathname=window.location.pathname;
 $('.navbar-nav > li >a[href="'+pathname+'"]').parent().addClass('active');
 
